@@ -5,15 +5,15 @@ from djangotoolbox.fields import ListField
 from companyData import data
 
 
-
 class Company(models.Model):
   prime = models.CharField()
 
 
 def populateCompany():
-  company = Company.objects.create(
+  company = Company(
     prime='Masih'
   )
+  company.save()
 
 
 # from models.company import Company, populateCompany
